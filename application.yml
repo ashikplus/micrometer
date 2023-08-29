@@ -1,0 +1,24 @@
+management:
+  elastic:
+    metrics:
+      export:
+        auto-create-index : false
+        host : https://localhost:9200
+        user-name : elastic
+        password : cbs*Kc-MPYk*OP7D-a0t
+        index : micrometer-metrics
+      tags:
+       application : Micrometer3Application
+
+management.elastic.metrics.export:
+    # You will probably want disable Elastic publishing in a local development profile.
+    enabled: true
+
+    # The interval at which metrics are sent to Elastic. The default is 1 minute.
+    step: 1m
+
+    # The index to store metrics in, defaults to "micrometer-metrics"
+    index: micrometer-metrics
+
+#server.port=8084
+#elasticsearch.url=https://localhost:9200
